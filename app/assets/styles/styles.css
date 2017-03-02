@@ -3,3 +3,22 @@
 @import "base/_global";
 @import "base/_mixins";
 @import "modules/_generic-content-container";
+@import "modules/_dice";
+
+.container {
+    width: 100%;
+    background-color: #f00;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.stages {
+    background-color: #ccc;
+    width: 100%;
+    
+    &:nth-child(1) {
+        background-color: #666;
+    }
+}

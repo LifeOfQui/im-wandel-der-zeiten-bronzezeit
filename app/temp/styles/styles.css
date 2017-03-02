@@ -475,7 +475,7 @@ img {
 }
 
 a {
-    color: #d59541;
+    /*color: $mainOrange;*/
 }
 
 .generic-content-container p {
@@ -493,4 +493,83 @@ a {
 
 .generic-content-container p a {
   font-weight: 700;
+}
+
+.diceContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.diceContainer .dice {
+  margin: 1vh 0.5vw;
+  height: 30px;
+  -ms-flex-preferred-size: 30px;
+      flex-basis: 30px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.diceContainer .dice__1 {
+  background-image: url('../images/dice/1.png');
+}
+
+.diceContainer .dice__2 {
+  background-image: url('../images/dice/2.png');
+}
+
+.diceContainer .dice__3 {
+  background-image: url('../images/dice/3.png');
+}
+
+.diceContainer .dice__4 {
+  background-image: url('../images/dice/4.png');
+}
+
+.diceContainer .dice__5 {
+  background-image: url('../images/dice/5.png');
+}
+
+.diceContainer .dice__6 {
+  background-image: url('../images/dice/6.png');
+}
+
+.diceContainer .dice--disabled {
+  -webkit-filter: sepia(1) opacity(0.7);
+          filter: sepia(1) opacity(0.7);
+}
+
+@media (min-width: 530px) {
+
+  .diceContainer .dice {
+    -ms-flex-preferred-size: 70px;
+        flex-basis: 70px;
+    height: 70px;
+  }
+}
+
+.container {
+    width: 100%;
+    background-color: #f00;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.stages {
+    background-color: #ccc;
+    width: 100%;
+}
+
+.stages:nth-child(1) {
+  background-color: #666;
 }
